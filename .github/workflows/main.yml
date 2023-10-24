@@ -1,0 +1,18 @@
+name: Code Space Activation
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  activate_code_space:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Activate Code Space
+        run: |
+          # أوامر الأكواد الخاصة بتنشيط مساحة الكود هنا
